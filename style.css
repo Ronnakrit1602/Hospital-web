@@ -1,0 +1,690 @@
+.bed {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .bed button {
+    padding: 5px 10px;
+    margin-top: 5px;
+  }
+
+  .bed button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .bed h5 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('img.jpg') center center fixed;  
+      height: 120vh;
+      height: 100%;
+    }
+
+    .slide {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 360px;
+      padding: 30px 40px;
+      margin-bottom: 40px;
+    }
+    .active {
+      display: block;
+    }
+
+    h1, h2{
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+    h3 ,h5 ,h6{
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;  
+      color: #003366;
+    }
+
+    h6{
+      margin-top: 20px;
+    }
+    h4{
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;  
+      color: #003366;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 15px;
+      border: 1.8px solid #a0c1f7;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #004080;
+      background-color: #e6f0ff;
+    }
+
+    .btn {
+      background: #007bff;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 0;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .username, .password, .number, .name, .gender, .birthdate, .blood,
+    .religion, .phone, .email, .address, .allergy, .relation, .emergency,
+    .parentsname, .allow {
+      margin-bottom: 15px;
+    }
+
+    .gender label,
+    .blood label,
+    .allergy label,
+    .relation label {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    /* Fix gender, blood group checkboxes to radio buttons for better UX */
+    .gender label input,
+    .blood label input,
+    .relation label input {
+      margin-right: 4px;
+      cursor: pointer;
+    }
+
+    /* Change checkboxes in gender, blood, relation to radio buttons where applicable */
+    /* For gender: only one selection */
+    .gender label input {
+      type: radio;
+    }
+
+    .remember {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .remember label {
+      cursor: pointer;
+      margin-left: -30px;
+      margin-bottom: 3px;
+    }
+    .remember input[type="checkbox"] {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+    .remember a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .remember a:hover {
+      text-decoration: underline;
+    }
+
+    .register, .login, .back {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+    .register a, .login a, .back a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .register a:hover, .login a:hover, .back a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout fix for birthdate inputs */
+    .birthdate input {
+      width: calc((100% - 20px) / 3);
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .birthdate input:last-child {
+      margin-right: 0;
+    }
+    .birthdate label + input {
+      margin-bottom: 8px;
+    }
+    .birthdate label[for="age"] {
+      margin-top: 10px;
+      display: block;
+    }
+    .birthdate input.age {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    /* Main Server Buttons */
+    .main button {
+      width: 100%;
+      padding: 12px 0;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: white;
+    }
+    .main .hb {
+      background-color: #0069d9;
+    }
+    .main .hb:hover {
+      background-color: #004a99;
+    }
+    .main .symptom {
+      background-color: #28a745;
+    }
+    .main .symptom:hover {
+      background-color: #1e7e34;
+    }
+    .main .delete {
+      background-color: #dc3545;
+    }
+    .main .delete:hover {
+      background-color: #a71d2a;
+    }
+    .RGwrapper {
+    flex-direction: column;
+    align-items: center;        
+    width: 100%;
+    height: 1880px; 
+    max-width: 1000px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 120vh;
+    margin: 40px auto;  
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);  
+  }
+  .LGwrapper {
+    display: flex;
+    margin-top: 120px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .MNwrapper {
+    display: flex;
+    margin-top: 240px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .HBwrapper {
+    display: flex;
+    margin-top: 40px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .FPwrapper {
+    display: flex;
+    margin-top: 180px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  .role-wrapper{
+    max-width: 450px;
+    width: 100%;
+    height: 300px;
+    background: white;
+    margin-top: 40px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin-top: 225px;
+  }
+ .bed {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .bed button {
+    padding: 5px 10px;
+    margin-top: 5px;
+  }
+
+  .bed button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .bed h5 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('img.jpg') center center fixed;  
+      height: 120vh;
+      height: 100%;
+    }
+
+    .slide {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 360px;
+      padding: 30px 40px;
+      margin-bottom: 40px;
+    }
+    .active {
+      display: block;
+    }
+
+    h1, h2{
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+    h3 ,h5 ,h6{
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;  
+      color: #003366;
+    }
+
+    h6{
+      margin-top: 20px;
+    }
+    h4{
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;  
+      color: #003366;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 15px;
+      border: 1.8px solid #a0c1f7;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #004080;
+      background-color: #e6f0ff;
+    }
+
+    .btn {
+      background: #007bff;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 0;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .username, .password, .number, .name, .gender, .birthdate, .blood,
+    .religion, .phone, .email, .address, .allergy, .relation, .emergency,
+    .parentsname, .allow {
+      margin-bottom: 15px;
+    }
+
+    .gender label,
+    .blood label,
+    .allergy label,
+    .relation label {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    /* Fix gender, blood group checkboxes to radio buttons for better UX */
+    .gender label input,
+    .blood label input,
+    .relation label input {
+      margin-right: 4px;
+      cursor: pointer;
+    }
+
+    /* Change checkboxes in gender, blood, relation to radio buttons where applicable */
+    /* For gender: only one selection */
+    .gender label input {
+      type: radio;
+    }
+
+    .remember {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .remember label {
+      cursor: pointer;
+      margin-left: -30px;
+      margin-bottom: 3px;
+    }
+    .remember input[type="checkbox"] {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+    .remember a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .remember a:hover {
+      text-decoration: underline;
+    }
+
+    .register, .login, .back {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+    .register a, .login a, .back a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .register a:hover, .login a:hover, .back a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout fix for birthdate inputs */
+    .birthdate input {
+      width: calc((100% - 20px) / 3);
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .birthdate input:last-child {
+      margin-right: 0;
+    }
+    .birthdate label + input {
+      margin-bottom: 8px;
+    }
+    .birthdate label[for="age"] {
+      margin-top: 10px;
+      display: block;
+    }
+    .birthdate input.age {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    /* Main Server Buttons */
+    .main button {
+      width: 100%;
+      padding: 12px 0;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: white;
+    }
+    .main .hb {
+      background-color: #0069d9;
+    }
+    .main .hb:hover {
+      background-color: #004a99;
+    }
+    .main .symptom {
+      background-color: #28a745;
+    }
+    .main .symptom:hover {
+      background-color: #1e7e34;
+    }
+    .main .delete {
+      background-color: #dc3545;
+    }
+    .main .delete:hover {
+      background-color: #a71d2a;
+    }
+    .RGwrapper {
+    flex-direction: column;
+    align-items: center;        
+    width: 100%;
+    height: 1880px; 
+    max-width: 1000px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 120vh;
+    margin: 40px auto;  
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);  
+  }
+  .LGwrapper {
+    display: flex;
+    margin-top: 30px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .MNwrapper {
+    display: flex;
+    margin-top: 240px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .HBwrapper {
+    display: flex;
+    margin-top: 40px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .FPwrapper {
+    display: flex;
+    margin-top: 180px ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  .username{
+    margin-top: 10px;
+  }
+  .role {
+    margin-left: 80px;
+    margin-top: 20px;
+  } 
+   .role label {
+    text-align: center;
+    font-size: 16px;
+    margin-right: 70px;
+    color: #003366;
+   }
+   .role button{
+    justify-content: center;
+    width: 70%;
+    height: 40px;
+    padding: 12px 0;
+    margin-bottom: 12px;
+    margin-left: -12px;
+    font-size: 1rem;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color:  #003366;
+    background:transparent;
+   }
+   .role  button:hover {
+    background: #032d57;
+    color: white;
+   }
+   .role .PS, .IN {
+    justify-content: center;
+
+   }
+   .RG6 {
+    justify-content: center;
+    margin-top: 50px;
+   }
+   .RG7 {
+    justify-content: center;
+    margin-top: 70px;
+   }
+   .RG7 label{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;  
+    color: #003366;
+   }
+   .citizen label{
+    font-size: 14px;
+    color: black ;
+    margin-right: 200px;
+   }
+   .citizen input{
+    display: flex;
+    margin-top: -25px;
+   }
+   .passwordGeneral label{
+    font-size: 14px;
+    color: black ;
+    margin-right: 190px;
+    display: flex;
+    margin-bottom: -20px;
+   }
+  .passwordGeneral input{
+    margin-top: 25px;
+  }
+  .nameGeneral label{
+    font-size: 15px;
+    color: black ;
+    margin-right: 180px;
+    display: flex;
+    margin-bottom: -20px;
+   }
+  .nameGeneral input{
+    margin-top: 25px;
+  }
+  .phoneGeneral label{
+    font-size: 14px;
+    color: black ;
+    margin-right: 180px;
+    display: flex;
+    margin-bottom: -20px;
+   }
+  .phoneGeneral input{
+    margin-top: 25px;
+  }
+  .emailGeneral label{
+    font-size: 14px;
+    color: black ;
+    margin-right: 180px;
+    display: flex;
+    margin-bottom: -20px;
+   }
+  .emailGeneral input{
+    margin-top: 25px;
+  }
+  
+    
